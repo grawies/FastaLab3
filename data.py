@@ -18,14 +18,14 @@ distances = [
 
 
 def mean_zero_ref():
-    data = pd.read_csv("utanljus.txt", sep='\t')
+    data = pd.read_csv("Measurements/utanljus.txt", sep='\t')
     u_0 = data[data.u == 0]
 
     return u_0.i.mean()
 
 
 def mean_zero(distance):
-    data = pd.read_csv("{:.3f}m.txt".format(distance), sep='\t')
+    data = pd.read_csv("Measurements/{:.3f}m.txt".format(distance), sep='\t')
     u_0 = data[data.u == 0]
 
     return u_0.i.mean()
@@ -38,4 +38,4 @@ plt.plot(distances, means, color='b')
 plt.axhline(mean_ref, color='r')
 plt.xlabel('Distance d [m]')
 plt.ylabel('Current i [A]')
-fig.savefig('distancedepence.pdf')
+fig.savefig('plots/distancedepence.pdf')
