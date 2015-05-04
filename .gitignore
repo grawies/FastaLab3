@@ -11,5 +11,6 @@
 *.aux
 *.log
 *.out
+*.pdf
 
 *~
