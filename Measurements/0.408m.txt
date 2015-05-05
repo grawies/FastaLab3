@@ -1,3 +1,4 @@
+t	u	i	iav	a	b	poo
 0	0	0.01065	NAN	0	NAN	
 0.002	0	0.012	NAN	0	NAN	
 0.004	0	0.0126	0.01176	0	NAN	
