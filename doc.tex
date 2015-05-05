@@ -53,7 +53,7 @@ $$\nu = \frac{E_g}{h} \approx 2.689*10^{14} Hz$$
 where $h$ is the Planck constant.
 
 
-We use a Power Cassy\textsuperscript{TM} in order to measure the current under applied bias and during illumination by a standard desk lamp. When no bias is applied 
+We use a Power Cassy$\textsuperscript{TM}$ in order to measure the current under applied bias and during illumination by a standard desk lamp. When no bias is applied 
 
 
 \section{Fitting experimental unilluminated diode data to the diode equation}
@@ -96,6 +96,38 @@ For large distances the background light probably contributes considerably to th
 The lamp screen scatters the light in a narrower cone shape and thus the input power larger.\\
 Assuming the smallest distances are the most controlled and correct, the measured efficiency lands at $\approx 20$ $\%$. This is below the theoretical maximum, but not by much. There are many uncontrolled contributions to the efficiency calculation.
 \plotpng{real-efficiency-plot}{Estimated maximal observed efficiencies of the solar cell for different distances to the desk lamp.}
+
+\section{Relation between maximum power and the distance between lamp and solar cell}
+The maximum power sent out by the lamp, $P_{max}$, in relation to the distance from said lamp, $d$, can be modeled as being spread out equally over the area of a sphere with the radius $d$. The area of the solar cell was measured to be $a=0.001475 m^{2}$. $\delta$ represents a constant systematic error of the distance measurement and $k’$ is a constant proportional to the electrical power of the lamp and how good the reflectors of the lamp are.
+
+$$P_{max} (d)=k’ \dot \frac{a}{4 \pi (d+\delta)^{2}} = \frac{k}{(d+\delta)^{2}}$$
+
+The two unknown constants $k$ and $\delta$ can be calculated performing a nonlinear fit of the maximum power at 10 different distances in MATLAB. This results in $k = 0.0004 Wm^{2}$ and $\delta = -0.0319 m$. The distances of measurement were chosen such that the points were placed equidistant apart in order to ensure linear relationships.
+
+\plotpng{ PmaxVSd}{Plot of the experimental data and the corresponding linear equation in relation to the inverted distance squared.}
+
+Below are the resulting relation between the voltage and the average current respectively the average power plotted when the applied bias is a triangular wave with amplitude $0.57 V$ and a frequency of $0.2 Hz$.
+
+\plotpng{ IVsU}{Plot of the average current  at different distances from the lamp in relation to the applied voltage.}
+
+\plotpng{ PVsU}{Plot of the average power at different distances from the lamp in relation to the applied voltage.}
+
+
+\section{Optimal load of the solar cell}
+The solar cell connected to the Power Cassy$\textsuperscript{TM}$ can be roughly modeled as shown in the figure below.
+
+\plotpng{CircuitModel}{A very simplified model of the Power Cassy$\textsuperscript{TM}$ connected to the solar cell.}
+
+Given the directions shown in the figure we have $U=U_0-IR_0$ such that the applied voltage has the same effect as a resistor $R=-frac{U}{I}$. The power done on the resistor is then $P=-U I=-R I^{2}$. This results in that we can write the current in terms of the gained voltage $U_0$ and the resistances as $I=\frac{U_0}{R + R_0}$. The resulting power given the direction of the current is thus
+
+$$P = R (\frac{ U_0}{ R_0+R})^{2}$$
+
+In order to find the resistance of the load which results in the maximum power, we take the derivative $\frac{d P}{d R} = 0$. Given the direction of the current, the optimal resistance is $R = R_0$. The corresponding optimal voltage is
+
+$$U_{opt}=R_0 I=\frac{U_0}{2}$$
+
+The maximum power output at the resistor results in the voltage $ U_{opt}$ which corresponds to half of the voltage over the solar cell. Theoretically this means that $U_{opt} = 0.285 V$. When $I=0$ in the I/U-plot above, we must have that $U = U_0$. This can be seen to be approximately the case at close distances.
+
 
 \begin{thebibliography}{1}
     \bibitem{Kittel}
