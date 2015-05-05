@@ -50,15 +50,18 @@ This results in a permanent electric field over the junction which can stop the 
 
 When the energy of the light hitting the solar cell is greater than the band gap of the diode, $E_g$, electrons will be excited and a current will start to flow in the direction opposite the electric field.
 
-In our laboratory experiment we examine a thin film of polycristalline Silicon (Si). At a temperature of $T = 300 K$ the band gap of a Silicon diode is $E_g=1.11 eV$. The minimum frequency of light which will be able to create a current is given by
+In this laboratory experiment we examine a thin film of polycristalline silicon (Si). At a temperature of $T = 300 K$ the band gap of a silicon diode is $E_g=1.11 eV$. The minimum frequency of light which will be able to create a current is given by
 
-$$\nu = \frac{E_g}{h} \approx 2.689*10^{14} Hz$$
+\begin{equation}
+    \nu = \frac{E_g}{h} \approx 2.689*10^{14} Hz
+\end{equation}
 
 where $h$ is the Planck constant.
 
 \section{Discussion of the results}
 
-We use a Power Cassy$\textsuperscript{TM}$ in order to measure the current under applied bias and during illumination by a standard desk lamp. When no bias is applied 
+We use a Power Cassy$\textsuperscript{TM}$ in order to measure the current under applied bias and during illumination by a standard desk lamp.
+When no bias is applied
 
 \plotpdf{distancedepence}{Generated current over distance from light source with
 zero bias (blue) and generated current for only ambient light (red).}
@@ -66,16 +69,18 @@ zero bias (blue) and generated current for only ambient light (red).}
 
 \section{Fitting experimental unilluminated diode data to the diode equation}
 The data collected can be used to verify the diode equation,
+
 \begin{equation}
-I = I_0 \left( 1 - e^{-V/V_0}\right)\label{eq:diode-equation}
+    I = I_0 \left( 1 - e^{-V/V_0}\right)\label{eq:diode-equation}
 \end{equation}
+
 where $V_0 = \frac{nk_BT}{e}$.
 $T$ is the diode temperature, $e$ the elementary charge and $k_B$ the Boltzmann constant.
-$n$ is the \emph{ideality factor} which usually lies in $[1,2]$ or sometimes higher for low currents.
+$n$ is the \emph{ideality factor} which usually lies in the range $[1,2]$ or sometimes higher for low currents.
 It accounts for imperfections in the diode under study, recombinations of electrons and holes.
 The data collected for an unilluminated solar cell was fit to equation \eqref{eq:diode-equation} by minimizing the sum of squared errors.
-The resulting coefficients were $I_0=3.34\text{ }\mu A$, $V_0=53.3$ $mV$.
-This value for $V_0$ yields an ideality factor at room temperature $T=293$ $K$ of $n = 2.11$.
+The resulting coefficients were $I_0=3.34\,\mu A$, $V_0=53.3\, mV$.
+This value for $V_0$ yields an ideality factor at room temperature $T=293\,K$ of $n = 2.11$.
 This is slightly above the expected interval, possibly due to the low current.
 The manner of fitting the data could also be discussed, as least-square fitting an exponential will mainly be fit to the data points with the largest (in magnitude) exponent.
 This can be observed in figure \ref{fig:diode-equation-fit}, where the experimental current is distinctly larger than the fitted current.
