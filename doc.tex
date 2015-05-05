@@ -56,7 +56,7 @@ where $h$ is the Planck constant.
 
 We use a Power Cassy$\textsuperscript{TM}$ in order to measure the current under applied bias and during illumination by a standard desk lamp. When no bias is applied 
 
-\plot{distancedepence}{Generated current over distance from light source with
+\plotpdf{distancedepence}{Generated current over distance from light source with
 zero bias (blue) and generated current for only ambient light (red).}
 
 
@@ -81,8 +81,8 @@ The mean current for voltages $V>-0.2$ is $1.54$ $mA$.
 
 
 \section{Efficiency}
-A simple model is set up in \cite{lab-instruction} for a theoretical upper limit to the efficiency $\nu$ of the solar cell. 
-he $pn$-junction is assumed to be operating at $0$ $K$, with a bandgap $E_g$ and illuminated by a blackbody at temperature $T$.
+A simple model is set up in \cite{lab-instruction} for a theoretical upper limit to the efficiency $\nu$ of the solar cell.
+he $pn$-junction is assumed to be operating at $0$ $K$, with a band gap $E_g$ and illuminated by a blackbody at temperature $T$.
 The efficiency is a function of $x_g=E_g/(k_BT)$, and a plot in \cite{lab-instruction} is reproduced here as figure \ref{fig:efficiency-plot}.
 \plotpng{efficiency-plot}{Theoretical upper limit of the efficiency $\nu$ of a $0$ $K$ $pn$-junction solar cell with band gap $E_g$ and illuminated by a temperature $T$ blackbody.}
 
@@ -93,7 +93,7 @@ A $1.13$ $eV$ band gap at $0$ $K$ corresponds best to a Si crystal, with band ga
 Assuming this had still been optimal at $300$ $K$, Si remains closest with a $1.11$ $eV$ band gap.\\
 In this laboratory there is no sun. The desk lamp is instead assumed to radiate like a blackbody at temperature $3000$ $K$. The Si solar cell will then here have $x_g = 4.53$, corresponding to a theoretical maximum possible efficiency of $\approx 0.25$.\\
 The actual efficiency of the solar cell in this lab can be roughly estimated.
-Assuming the light bulb is a $P_0=60$ $W$ lightbulb emitting all of the power like a $3000$ $K$ blackbody, at a distance $R$ the solar cell with an area $A=6$ $cm^2$ will be receiving an input power $P_{in} = P_0 \frac{A}{2\pi R^2} = \frac{57.2\text{ }Wcm^2}{R^2}$.
+Assuming the light bulb is a $P_0=60$ $W$ light bulb emitting all of its power like a $3000$ $K$ blackbody, at a distance $R$ the solar cell with an area $A=6$ $cm^2$ will be receiving an input power $P_{in} = P_0 \frac{A}{2\pi R^2} = \frac{57.2\text{ }Wcm^2}{R^2}$.
 The maximal observed power output $P_{out}$ for different distances $R$ give a range of efficiencies plotted in figure \ref{fig:real-efficiency-plot}.
 All of these measurements are overestimates.
 For large distances the background light probably contributes considerably to the input power, and for smaller distances the half-sphere approximation is not realistic.
@@ -104,17 +104,19 @@ Assuming the smallest distances are the most controlled and correct, the measure
 \section{Relation between maximum power and the distance between lamp and solar cell}
 The maximum power sent out by the lamp, $P_{max}$, in relation to the distance from said lamp, $d$, can be modeled as being spread out equally over the area of a sphere with the radius $d$. The area of the solar cell was measured to be $a=0.001475 m^{2}$. $\delta$ represents a constant systematic error of the distance measurement and $k’$ is a constant proportional to the electrical power of the lamp and how good the reflectors of the lamp are.
 
-$$P_{max} (d)=k’ \dot \frac{a}{4 \pi (d+\delta)^{2}} = \frac{k}{(d+\delta)^{2}}$$
+\begin{equation}
+    P_{max}(d) = k’\frac{a}{4\pi(d+\delta)^2} = \frac{k}{(d+\delta)^2}
+\end{equation}
 
 The two unknown constants $k$ and $\delta$ can be calculated performing a nonlinear fit of the maximum power at 10 different distances in MATLAB. This results in $k = 0.0004 Wm^{2}$ and $\delta = -0.0319 m$. The distances of measurement were chosen such that the points were placed equidistant apart in order to ensure linear relationships.
 
-\plotpng{ PmaxVSd}{Plot of the experimental data and the corresponding linear equation in relation to the inverted distance squared.}
+\plotpng{PmaxVSd}{Plot of the experimental data and the corresponding linear equation in relation to the inverted distance squared.}
 
 Below are the resulting relation between the voltage and the average current respectively the average power plotted when the applied bias is a triangular wave with amplitude $0.57 V$ and a frequency of $0.2 Hz$.
 
-\plotpng{ IVsU}{Plot of the average current  at different distances from the lamp in relation to the applied voltage.}
+\plotpng{IVsU}{Plot of the average current  at different distances from the lamp in relation to the applied voltage.}
 
-\plotpng{ PVsU}{Plot of the average power at different distances from the lamp in relation to the applied voltage.}
+\plotpng{PVsU}{Plot of the average power at different distances from the lamp in relation to the applied voltage.}
 
 
 \section{Optimal load of the solar cell}
@@ -124,15 +126,17 @@ The solar cell connected to the Power Cassy$\textsuperscript{TM}$ can be roughly
 
 Given the directions shown in the figure we have $U=U_0-IR_0$ such that the applied voltage has the same effect as a resistor $R=-frac{U}{I}$. The power done on the resistor is then $P=-U I=-R I^{2}$. This results in that we can write the current in terms of the gained voltage $U_0$ and the resistances as $I=\frac{U_0}{R + R_0}$. The resulting power given the direction of the current is thus
 
-$$P = R (\frac{ U_0}{ R_0+R})^{2}$$
+\begin{equation}
+    P = R (\frac{ U_0}{ R_0+R})^{2}
+\end{equation}
 
 In order to find the resistance of the load which results in the maximum power, we take the derivative $\frac{d P}{d R} = 0$. Given the direction of the current, the optimal resistance is $R = R_0$. The corresponding optimal voltage is
 
-$$U_{opt}=R_0 I=\frac{U_0}{2}$$
+\begin{equation}
+    U_{opt}=R_0 I=\frac{U_0}{2}
+\end{equation}
 
 The maximum power output at the resistor results in the voltage $ U_{opt}$ which corresponds to half of the voltage over the solar cell. Theoretically this means that $U_{opt} = 0.285 V$. When $I=0$ in the I/U-plot above, we must have that $U = U_0$. This can be seen to be approximately the case at close distances.
-
->>>>>>> 8d9cb2a6cac5058bbe204d541e325f8143b83aa1
 
 \begin{thebibliography}{1}
     \bibitem{Kittel}
