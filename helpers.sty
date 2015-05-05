@@ -1,9 +1,18 @@
 \ProvidesFile{helpers}
     \newcommand{\abs}[1]{\left\vert #1 \right\vert}
-    \newcommand{\plot}[2]{
+    \newcommand{\plotpdf}[2]{
 		\begin{figure}[H]
 			\begin{center}
 				\includegraphics[width=0.9\textwidth]{plots/#1.pdf}
+			\end{center}
+			\caption{#2}
+			\label{fig:#1}
+		\end{figure}
+    }
+    \newcommand{\plotpng}[2]{
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=0.9\textwidth]{plots/#1.png}
 			\end{center}
 			\caption{#2}
 			\label{fig:#1}
