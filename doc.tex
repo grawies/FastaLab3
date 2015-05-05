@@ -84,30 +84,36 @@ This value for $V_0$ yields an ideality factor at room temperature $T=293\,K$ of
 This is slightly above the expected interval, possibly due to the low current.
 The manner of fitting the data could also be discussed, as least-square fitting an exponential will mainly be fit to the data points with the largest (in magnitude) exponent.
 This can be observed in figure \ref{fig:diode-equation-fit}, where the experimental current is distinctly larger than the fitted current.
-The mean current for voltages $V>-0.2$ is $1.54$ $mA$.
+The mean current for voltages $V>-0.2$ is $1.54\,mA$.
 \plotpng{diode-equation-fit}{Plot of the experimental IV-data for the unilluminated diode, together with the graph of the fitted diode equation.}
 \section{Discussion of the results}
 
 
 \section{Efficiency}
 A simple model is set up in \cite{lab-instruction} for a theoretical upper limit to the efficiency $\nu$ of the solar cell.
-he $pn$-junction is assumed to be operating at $0$ $K$, with a band gap $E_g$ and illuminated by a blackbody at temperature $T$.
+he $pn$-junction is assumed to be operating at $0\,K$, with a band gap $E_g$ and illuminated by a blackbody at temperature $T$.
 The efficiency is a function of $x_g=E_g/(k_BT)$, and a plot in \cite{lab-instruction} is reproduced here as figure \ref{fig:efficiency-plot}.
-\plotpng{efficiency-plot}{Theoretical upper limit of the efficiency $\nu$ of a $0$ $K$ $pn$-junction solar cell with band gap $E_g$ and illuminated by a temperature $T$ blackbody.}
+\plotpng{efficiency-plot}{Theoretical upper limit of the efficiency $\nu$ of a $0\,K$ $pn$-junction solar cell with band gap $E_g$ and illuminated by a temperature $T$ blackbody.}
 
 The maximal theoretical efficiency appears to be about $\eta_{max}=0.44$, at $x_g=2.26$.
-Treating the sun as a $5800$ $K$ blackbody gives an optimal band gap of $E_g = x_g k_B T = 1.13$ $eV$.
+Treating the sun as a $5800\,K$ blackbody gives an optimal band gap of $E_g =
+x_g k_B T = 1.13\,eV$.
 An appropriate crystal near this $E_g$ can be found using Table 1 from chapter 8 of \cite{Kittel}.
-A $1.13$ $eV$ band gap at $0$ $K$ corresponds best to a Si crystal, with band gap $1.17$ $eV$ at $0$ $K$.
-Assuming this had still been optimal at $300$ $K$, Si remains closest with a $1.11$ $eV$ band gap.\\
-In this laboratory experiment there is no sun. The desk lamp is instead assumed to radiate like a blackbody at temperature $3000$ $K$. The Si solar cell will then here have $x_g = 4.53$, corresponding to a theoretical maximum possible efficiency of $\approx 0.25$.\\
+A $1.13\,eV$ band gap at $0\,K$ corresponds best to a Si crystal, with band gap
+$1.17\,eV$ at $0\,K$.
+Assuming this had still been optimal at $300\,K$, Si remains closest with a
+$1.11\,eV$ band gap.\\
+In this laboratory experiment there is no sun. The desk lamp is instead assumed to radiate like a blackbody at temperature $3000\,K$. The Si solar cell will then here have $x_g = 4.53$, corresponding to a theoretical maximum possible efficiency of $\approx 0.25$.\\
 The actual efficiency of the solar cell in this lab can be roughly estimated.
-Assuming the light bulb is a $P_0=60$ $W$ light bulb emitting all of its power like a $3000$ $K$ blackbody, at a distance $R$ the solar cell with an area $A=6$ $cm^2$ will be receiving an input power $P_{in} = P_0 \frac{A}{2\pi R^2} = \frac{57.2\text{ }Wcm^2}{R^2}$.
+Assuming the light bulb is a $P_0=60\,W$ light bulb emitting all of its power
+like a $3000\,K$ blackbody, at a distance $R$ the solar cell with an area
+$A=6\,cm^2$ will be receiving an input power $P_{in} = P_0 \frac{A}{2\pi R^2}
+= \frac{57.2\,Wcm^2}{R^2}$.
 The maximal observed power output $P_{out}$ for different distances $R$ give a range of efficiencies plotted in figure \ref{fig:real-efficiency-plot}.
 All of these measurements are overestimates.
 For large distances the background light probably contributes considerably to the input power, and for smaller distances the half-sphere approximation is not realistic.
 The lamp screen scatters the light in a narrower cone shape and thus the input power larger.\\
-Assuming the smallest distances are the most controlled and correct, the measured efficiency lands at $\approx 20$ $\%$. This is below the theoretical maximum, but not by much. There are many uncontrolled contributions to the efficiency calculation.
+Assuming the smallest distances are the most controlled and correct, the measured efficiency lands at $\approx 20\,\%$. This is below the theoretical maximum, but not by much. There are many uncontrolled contributions to the efficiency calculation.
 \plotpng{real-efficiency-plot}{Estimated maximal observed efficiencies of the solar cell for different distances to the desk lamp.}
 
 \section{Relation between maximum power and the distance between lamp and solar cell}
