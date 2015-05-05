@@ -61,17 +61,20 @@ where $h$ is the Planck constant.
 \section{Discussion of the results}
 
 We use a Power Cassy$\textsuperscript{TM}$ in order to measure the current under applied bias and during illumination by a standard desk lamp.
-When no bias is applied
 
-\plotpdf{distancedepence}{Generated current over distance from light source with
-zero bias (blue) and generated current for only ambient light (red).}
+When no external bias is applied to the photovoltaic cell one can clearly see
+from \ref{distancedepence} that there is a strong positive correlation between
+incident light (higher for lower distances) and the generated current.
 
+\plotpdf{distancedepence}{Mean generated current from photovoltaic cell ($i$) over
+the distance between photovoltaic cell and light source ($d$) with zero bias (blue)
+and generated current for the ambient light in the laboratory setup (red).}
 
 \section{Fitting experimental unilluminated diode data to the diode equation}
 The data collected can be used to verify the diode equation,
 
 \begin{equation}
-    I = I_0 \left( 1 - e^{-V/V_0}\right)\label{eq:diode-equation}
+    I = I_0 \left(1-e^{-V/V_0}\right)\label{eq:diode-equation}
 \end{equation}
 
 where $V_0 = \frac{nk_BT}{e}$.
@@ -84,7 +87,7 @@ This value for $V_0$ yields an ideality factor at room temperature $T=293\,K$ of
 This is slightly above the expected interval, possibly due to the low current.
 The manner of fitting the data could also be discussed, as least-square fitting an exponential will mainly be fit to the data points with the largest (in magnitude) exponent.
 This can be observed in figure \ref{fig:diode-equation-fit}, where the experimental current is distinctly larger than the fitted current.
-The mean current for voltages $V>-0.2$ is $1.54\,mA$.
+The mean current for voltages $U>-0.2$ is $1.54\,mA$.
 \plotpng{diode-equation-fit}{Plot of the experimental IV-data for the unilluminated diode, together with the graph of the fitted diode equation.}
 \section{Discussion of the results}
 
