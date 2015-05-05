@@ -55,6 +55,24 @@ where $h$ is the Planck constant.
 
 We use a Power Cassy\textsuperscript{TM} in order to measure the current under applied bias and during illumination by a standard desk lamp. When no bias is applied 
 
+
+\section{Fitting experimental unilluminated diode data to the diode equation}
+The data collected can be used to verify the diode equation,
+\begin{equation}
+I = I_0 \left( 1 - e^{-V/V_0}\right)\label{eq:diode-equation}
+\end{equation}
+where $V_0 = \frac{nk_BT}{e}$.
+$T$ is the diode temperature, $e$ the elementary charge and $k_B$ the Boltzmann constant.
+$n$ is the \emph{ideality factor} which usually lies in $[1,2]$ or sometimes higher for low currents.
+It accounts for imperfections in the diode under study.
+The data collected for an unilluminated solar cell was fit to equation \eqref{eq:diode-equation} by minimizing the sum of squared errors.
+The resulting coefficients were $I_0=3.34\text{ }\mu A$, $V_0=53.3$ $mV$.
+This value for $V_0$ yields an ideality factor at room temperature $T=293$ $K$ of $n = 2.11$.
+This is slightly above the expected interval, possibly due to the low current.
+The manner of fitting the data could also be discussed, as least-square fitting an exponential will mainly be fit to the data points with the largest (in magnitude) exponent.
+This can be observed in figure \ref{fig:diode-equation-fit}, where the experimental current is distinctly larger than the fitted current.
+The mean current for voltages $V>-0.2$ is $1.54$ $mA$.
+\plotpng{diode-equation-fit}{Plot of the experimental IV-data for the unilluminated diode, together with the graph of the fitted diode equation.}
 \section{Discussion of the results}
 
 \section{Conclusion}
