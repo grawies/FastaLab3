@@ -130,16 +130,18 @@ The area of the solar cell was measured to be $a=0.001475 m^{2}$.
 $\delta$ represents a constant systematic error of the distance measurement and $k’$ is a constant proportional to the electrical power of the lamp and how good the reflectors of the lamp are.
 
 \begin{equation}
-    P_{max}(d) = k’\frac{a}{4\pi(d+\delta)^2} = \frac{k}{(d+\delta)^2}
+    P_{max}(d) = k’\frac{a}{4\pi(d+\delta)^2} = \frac{k}{(d+\delta)^2} =: f(d),\label{eq:Pmaxf}
 \end{equation}
-
+where $f(0) = k/\delta^2$.
 The two unknown constants $k$ and $\delta$ can be calculated performing a
 nonlinear fit of the maximum power at 10 different distances in MATLAB. This
-results in $k = 0.0004\,Wm^{2}$ and $\delta = -0.0319\,m$.
+results in $k \approx 4.3787\cdot 10^{-4}\,Wm^{2}$ and $\delta \approx -0.02947\,m$.
 The distances of measurement were chosen such that the points were placed equidistant apart
 in order to make it easier to ensure the linear relationship.
+Equation \eqref{eq:Pmaxf} can be illustrated by plotting $P_{max}$ vs $f(d)/f(0)$.
+This is done in figure \ref{fig:PmaxVSfdf0}, with a linear fit for comparison.
 
-\plotpng{PmaxVSd}{Experimental data and the corresponding linear equation in relation to the inverted distance squared.}
+\plotpng{PmaxVSfdf0}{Experimental data and the corresponding linear equation in relation to the inverted distance squared.}
 
 Below are the resulting relation between the voltage and the average current
 respectively the average power plotted when the applied bias is a triangular
