@@ -1,6 +1,9 @@
+#!/usr/bin/python
+
 from __future__ import division, print_function
 
 from matplotlib import pyplot as plt
+
 import pandas as pd
 
 distances = [
