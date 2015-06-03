@@ -28,5 +28,5 @@ plot([0 max(fdf0)*1.05], [0 max(fdf0)*1.05*slope], 'b')
 grid on
 xlabel('f(d)/f(0)')
 ylabel('P_{max} [W]')
-title('Power output P_{max} vs nonlinear fitted function f(d)/f(0)')
+title('Power output P_{max} vs fitted f(d)/f(0)')
 legend('data','linear fit')
