@@ -70,6 +70,19 @@ incident light (higher for lower distances) and the generated current.
 the distance between photovoltaic cell and light source ($d$) with zero bias (blue)
 and generated current for the ambient light in the laboratory setup (red).}
 
+\section{Effects of the power grid current frequency}
+
+Standard electricity sources feed alternating current with a frequency of 50 Hz in this laboratory (in Sweden).
+The current generates heat and light in the lightbulb which produces the current in the photovoltaic cell.
+With a lightbulb of resistance $R$, current $I$ and voltage $U$, the power produced is $P=UI=RI^2$.
+Assuming the current varies as $sin(\omega t)$ and the current in the photovoltaic cell is assumed to be $I_{c}\propto P$,
+the current in the cell is $I_c \propto sin^2(\omega t)$, with a frequency of 100 Hz.
+This can be illustrated by measuring the current in the cell while keeping the light source and the voltage over the cell fixed.
+In figure \ref{fig:current100Hz} the current clearly varies with a frequency of $\approx$ 100 Hz.
+This effect is eliminated by using a current average $I_{av}$, measured as an average of $I_c$ over 10 ms.
+This is taken as the current $I$ for the remainder of this report.
+\plotpng{current100Hz}{Current measured over a short period of time, illustrating the variation in current in the photovoltaic cell due to the power grid current frequency.}
+
 \section{Fitting experimental unilluminated diode data to the diode equation}
 The data collected can be used to verify the diode equation,
 
