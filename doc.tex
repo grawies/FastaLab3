@@ -103,7 +103,6 @@ This can be observed in figure \ref{fig:diode-equation-fit}, where the experimen
 The mean current for voltages $U>-0.2$ is $1.54\,mA$.
 \plotpng{diode-equation-fit}{The experimental IV-data for the unilluminated diode, together with the graph of the fitted diode equation.}
 
-
 \section{Efficiency}
 A simple model is set up in \cite{lab-instruction} for a theoretical upper limit to the efficiency $\nu$ of the solar cell.
 The $pn$-junction is assumed to be operating at $0\,K$, with a band gap $E_g$
@@ -121,9 +120,9 @@ Assuming this had still been optimal at $300\,K$, Si remains closest with a
 $1.11\,eV$ band gap.\\
 In this laboratory experiment there is no sun. The desk lamp is instead assumed to radiate like a blackbody at temperature $3000\,K$. The Si solar cell will then here have $x_g = 4.53$, corresponding to a theoretical maximum possible efficiency of $\approx 0.25$.\\
 The actual efficiency of the solar cell in this lab can be roughly estimated.
-Assuming the light bulb is a $P_0=60\,W$ light bulb emitting all of its power
-like a $3000\,K$ blackbody, at a distance $R$ the solar cell with an area
-$A=6\,cm^2$ will be receiving an input power $P_{in} = P_0 \frac{A}{2\pi R^2}
+Assuming the light bulb is a $P_0=60\,W$ light bulb emitting about half of the electrical power
+as radiation from a $3000\,K$ blackbody, at a distance $R$ the solar cell with an area
+$A=12\,cm^2$ will be receiving an input power $P_{in} = \frac{1}{2} P_0 \frac{A}{2\pi R^2}
 = \frac{57.2\,Wcm^2}{R^2}$.
 The maximal observed power output $P_{out}$ for different distances $R$ give a range of efficiencies plotted in figure \ref{fig:real-efficiency-plot}.
 All of these measurements are overestimates.
@@ -188,8 +187,11 @@ Given the direction of the current, the optimal resistance is $R = R_0$. The cor
 \end{equation}
 
 The maximum power output at the resistor results in the voltage $ U_{opt}$
-which corresponds to half of the voltage over the solar cell. Theoretically
-this means that $U_{opt} = 0.285 V$. When $I=0$ in the IV-plot above \ref{fig:IVsU}, we must have that $U = U_0$. This can be seen to be approximately the case at close distances.
+which corresponds to half of the voltage over the solar cell.
+When $I=0$ in the IV-plot above \ref{fig:IVsU}, we must have that $U = U_0$.
+This is apparent in Figure \ref{fig:CircuitModel}: with $I=0$ the only contributions to the voltages in the circuit are $U$ and $U_0$.\\
+Using the measurements for the mimimum solar cell to light bulb distance, corresponding to the maximal power output, $U_{opt}$ can be measured and calculated. These measurements are the red curves in Figures \ref{fig:IVsU} and \ref{fig:PVsU}.\\
+When $I=0$ in Figure \ref{fig:IVsU} the voltage is $U_0\approx -4.5$ V. This gives a theoretical $U_{opt}^{theo}=-2.25$ V. However, a directly measured voltage can be found where the power $P$ attains a maximum in Figure \ref{fig:PVsU}, giving $U_{opt}^{direct}=-3.5$ V. The value differs significantly from $U_{opt}^{theo}$ but is still reasonably close.
 
 \begin{thebibliography}{1}
     \bibitem{Kittel}
